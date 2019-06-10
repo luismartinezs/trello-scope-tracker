@@ -1,0 +1,6 @@
+- Deploy app offline
+- Create trello webhook
+- App responds to webhook
+- App creates new row in spreadsheet (via zapier)
+- App gets scope from custom fields
+- App adds row in spreadsheet with data: card name / date / scope

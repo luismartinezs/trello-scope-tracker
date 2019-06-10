@@ -1,0 +1,15 @@
+{
+  "trelloList": {
+    "done": {
+      "modelId": "595bb56e1f4771dcf3e7ceb0"
+    }
+  },
+  "trelloCustomFields": {
+    "scope": { "idCustomField": "5cfd89261376b0827542b1dc" }
+  },
+  "zapier": {
+    "addRowToSheet": {
+      "url": "https://hooks.zapier.com/hooks/catch/4997624/v0e2zl/"
+    }
+  }
+}

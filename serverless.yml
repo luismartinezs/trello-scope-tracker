@@ -1,0 +1,29 @@
+service: trello-scope-tracker
+
+# Setup different profiles similarly to CT: dev, production, staging
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: eu-central-1
+
+functions:
+  scopeTracker:
+    handler: handler.webhook
+    events:
+      - http:
+          path: webhook
+          method: post
+      - http:
+          path: webhook
+          method: get
+      - http:
+          path: webhook
+          method: head
+    environment:
+      TRELLO_API_KEY: ${file(./config.secrets.json):TRELLO_API_KEY}
+      TRELLO_API_TOKEN: ${file(./config.secrets.json):TRELLO_API_TOKEN}
+      ENV: ${opt:stage, self:provider.stage}
+
+plugins:
+  - serverless-offline
