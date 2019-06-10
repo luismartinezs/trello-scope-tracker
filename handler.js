@@ -54,7 +54,7 @@ async function addRowToSheet(body) {
   );
   const scope = getScope(cardCustomFields);
   if (typeof scope !== "undefined") {
-    return zapierPostRequest(zapier.addRowToSheet.url, { ...body, scope });
+    return await zapierPostRequest(zapier.addRowToSheet.url, { ...body, scope });
   }
 }
 
@@ -80,7 +80,7 @@ module.exports.webhook = async event => {
     if (event.body) {
       const body = JSON.parse(event.body);
       if (body.action) {
-        movedToDone(body);
+        await movedToDone(body);
       }
     }
   } catch (err) {

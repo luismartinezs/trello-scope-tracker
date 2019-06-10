@@ -12,7 +12,7 @@ If the `--stage` option is not used, the default stage is `dev`
 
 Above command will require recreating any webhooks pointing to this app, since the URL will change
 
-Update a function of the app without redeploying: `sls deploy -f webhookHandler`
+Update a function of the app without redeploying: `sls deploy -f scopeTracker`
 
 Above command does NOT require recreating any webhooks, since the URL will remain the same.
 
@@ -22,7 +22,7 @@ Remove the app: `sls remove`
 
 See URLs of deployed apps for a given AWS profile (e.g. serverless-admin): `sls deploy --profile serverless-agent`
 
-See app logs: `sls logs -f webhookHandler -t`
+See app logs: `sls logs -f scopeTracker -t`
 
 [Serverless commands cheatsheet](https://serverless.com/framework/docs/providers/aws/guide/workflow#cheat-sheet)
 
